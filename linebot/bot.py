@@ -15,7 +15,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 yuhuan = LINETCR.LINE()
 #yuhuan.login(qr=True)
-yuhuan.login(token='EMQxNXtALpZ3htuxbse5.LDx318968ibUQCMuoJV7Tq.dDb/AAsxGi/yLHO3FtKyZF6Ejrw8TyVN5PbpGF2OeNI=')
+yuhuan.login(token='ENDfSuj69WIKYJJ0lDGd.r2+azP4x10bzxfJfR/Uwtq.uZ8YmN7ymC5/6WtELpZ6rUJFgCT/Urj7mFkND0RJl3M=')
 yuhuan.loginResult()
 
 print "  Linebot Start Successful!"
@@ -142,7 +142,7 @@ groupMessage ="""
 ║       ღ 半垢 ღ
 ╚═══════════════
 """
-vip="u95d5f7d7cf7af0806ea9c9943a3bfbb5"
+vip="u476fc0669e17d740595c58c5afeb964d"
 
 setMessage ="""
 ╔═══════════════
@@ -244,8 +244,8 @@ helpMessage ="""
 KAC=[yuhuan]
 mid = yuhuan.getProfile().mid
 Bots=[mid]
-Creator=["u95d5f7d7cf7af0806ea9c9943a3bfbb5"]
-admin=["u95d5f7d7cf7af0806ea9c9943a3bfbb5"]
+Creator=["u476fc0669e17d740595c58c5afeb964d"]
+admin=["u476fc0669e17d740595c58c5afeb964d"]
 
 contact = yuhuan.getProfile()
 backup1 = yuhuan.getProfile()
@@ -261,7 +261,7 @@ wait = {
     "Bot":True,
     "AutoJoin":False,
     "AutoJoinCancel":False,
-    "memberscancel":30,
+    "memberscancel":3,
     "Members":1,
     "AutoCancel":False,
     "AutoKick":False,
@@ -622,7 +622,7 @@ def bot(op):
 		    G = yuhuan.getGroup(op.param1)
                     if len(G.members) <= wait["memberscancel"]:
                         yuhuan.acceptGroupInvitation(op.param1)
-                        yuhuan.sendText(op.param1,"遺憾 " + yuhuan.getContact(op.param2).displayName + "\n少於30名成員... ")
+                        yuhuan.sendText(op.param1,"遺憾 " + yuhuan.getContact(op.param2).displayName + "\n少於3名成員... ")
                         yuhuan.leaveGroup(op.param1)                        
 		    else:
                         yuhuan.acceptGroupInvitation(op.param1)
@@ -1037,8 +1037,8 @@ def bot(op):
             elif msg.text in ["Showad","Ad"]:
                 msg.contentType = 13
                 yuhuan.sendMessage(msg)
-		yuhuan.sendText(msg.to,"http://bit.ly/35KyQU6")
-		yuhuan.sendText(msg.to,"This feature may not be work at China Mainland Area")
+		yuhuan.sendText(msg.to,"媽蛋")
+		yuhuan.sendText(msg.to,"不能在[亞洲地區]使用此功能")
 
  
 
